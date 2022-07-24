@@ -1,13 +1,12 @@
 // Paso 1: Importación de componentes necesarios
 const express = require('express');
-const colors = require('colors');
 
 // CORS
 const cors = require('cors');
 
 // Paso 2: Declaración de variables para levantar el servidor
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Paso 3: Obtener los routes
 const routerApi = require('./routes/main.controller.js');
@@ -35,7 +34,7 @@ app.get('/', (req, res) => {
 
 // Paso 5: Levantar el servidor
 app.listen(port, ()=>{
-  console.log("Servidor express listen...". rainbow);
+  console.log("Servidor express listen...");
 });
 
 // Paso 6: Agregar el reoute a la app
