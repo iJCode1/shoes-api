@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "50a530a9-3ebc-4e3b-8b1d-4fe3cb550f62",
+		"name": "shoes-g16d",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7031004"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/shoes/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getAll",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/shoes/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shoes",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "239"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ef-AFDxADDmg/af1+nm/x/7wrst1/0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Jul 2022 04:49:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"brand\": \"Noke\",\n        \"price\": 299,\n        \"size\": 29\n    },\n    {\n        \"id\": 2,\n        \"brand\": \"edidas\",\n        \"price\": 1599,\n        \"size\": 27\n    },\n    {\n        \"id\": 3,\n        \"brand\": \"floxi\",\n        \"price\": 430,\n        \"size\": 25.5\n    },\n    {\n        \"id\": 4,\n        \"brand\": \"pima\",\n        \"price\": 1400,\n        \"size\": 22\n    },\n    {\n        \"id\": 5,\n        \"brand\": \"gassi\",\n        \"price\": 289,\n        \"size\": 28\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getDummy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/dummy/hola",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dummy",
+						"hola"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll with queryParams",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/shoes/?price=1000",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes",
+						""
+					],
+					"query": [
+						{
+							"key": "otro",
+							"value": "\"otro contenido\"",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/shoes/3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 6,\n    \"brand\": \"Punum\",\n    \"price\": 1200,\n    \"size\": 21\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/shoes/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 6,\n    \"brand\": \"Punum\",\n    \"price\": 1200,\n    \"size\": 21\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/shoes/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shoes",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Jul 2022 04:50:11 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "partialEdit",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"Otra marca\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/shoes/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "completeEdit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"Puma\",\n    \"price\": 900,\n    \"size\": 22\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/shoes/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"Puma\",\n    \"price\": 900,\n    \"size\": 22\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/shoes/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"shoes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
